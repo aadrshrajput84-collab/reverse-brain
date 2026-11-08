@@ -1,0 +1,6 @@
+{
+  "name": "Reverse Brain – Think Opposite",
+  "description": "Fast-paced futuristic 3D neon brain reaction arcade game. Think opposite, react faster across 6 mind-bending game modes with glowing neon aesthetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
