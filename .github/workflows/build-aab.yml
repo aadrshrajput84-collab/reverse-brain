@@ -33,7 +33,7 @@ jobs:
           SDKMANAGER="$(find "${ANDROID_HOME:-/usr/local/lib/android/sdk}/cmdline-tools" -type f -name sdkmanager | head -n 1)"
           test -n "$SDKMANAGER" || (echo "Android sdkmanager was not found" && exit 1)
           echo "$(dirname "$SDKMANAGER")" >> "$GITHUB_PATH"
-          yes | "$SDKMANAGER" --sdk_root="${ANDROID_HOME:-/usr/local/lib/android/sdk}" --licenses
+          yes | "$SDKMANAGER" --sdk_root="${ANDROID_HOME:-/usr/local/lib/android/sdk}" --licenses || true
           "$SDKMANAGER" --sdk_root="${ANDROID_HOME:-/usr/local/lib/android/sdk}" "platform-tools" "platforms;android-36" "build-tools;36.0.0"
 
       - name: Install dependencies
